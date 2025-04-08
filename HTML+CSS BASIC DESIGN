@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Attendance System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Attendance Form</h1>
+  <form>
+    <input type="text" placeholder="Student Name" required>
+    <input type="date" required>
+    <select>
+      <option>Present</option>
+      <option>Absent</option>
+    </select>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
