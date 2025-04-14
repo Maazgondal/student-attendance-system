@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Attendance System</title>
+
+  <!-- Link CSS File -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Student Attendance Management System</h1>
+  </header>
+
+  <main class="container">
+    <section class="form-section">
+      <h2>Mark Attendance</h2>
+      <form id="attendanceForm">
+        <input type="text" id="name" placeholder="Student Name" required />
+        <input type="text" id="roll" placeholder="Roll Number" required />
+        <button type="submit">Mark Present</button>
+      </form>
+    </section>
+
+    <section class="table-section">
+      <h2>Attendance Record</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Roll No</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="recordTable"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Link JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
+
