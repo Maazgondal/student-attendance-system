@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Attendance Management System</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="p-4">
+  <header>
+    <h1 class="text-3xl font-bold">Student Attendance Management System</h1>
+  </header>
+
+  <main>
+    <!-- Login Page -->
+    <section id="login-page" class="max-w-xl mx-auto">
+      <h2 class="text-xl font-semibold mb-2">Login</h2>
+      <form class="space-y-2">
+        <div>
+          <label for="semester-select">Semester:</label>
+          <select id="semester-select" required>
+            <option value="">--Select Semester--</option>
+            <option value="Semester 1">Semester 1</option>
+            <option value="Semester 2">Semester 2</option>
+            <option value="Semester 3">Semester 3</option>
+            <option value="Semester 4">Semester 4</option>
+            <option value="Semester 5">Semester 5</option>
+            <option value="Semester 6">Semester 6</option>
+            <option value="Semester 7">Semester 7</option>
+            <option value="Semester 8">Semester 8</option>
+          </select>
+        </div>
+        <div>
+          <label for="section-select">Section:</label>
+          <select id="section-select" required>
+            <option value="">--Select Section--</option>
+            <option value="A">Section A</option>
+            <option value="B">Section B</option>
+            <option value="C">Section C</option>
+            <option value="D">Section D</option>
+          </select>
+        </div>
+        <div>
+          <label for="teacher-name">Teacher Name:</label>
+          <input type="text" id="teacher-name" required>
+        </div>
+        <div>
+          <label for="teacher-password">Password:</label>
+          <input type="password" id="teacher-password" required>
+        </div>
+        <button type="button" onclick="login()" class="bg-blue-600 text-white px-4 py-2 rounded">Login</button>
+      </form>
+    </section>
+
+    <!-- App Content -->
+    <div id="app" class="hidden">
+      <!-- Add Students -->
+      <section>
+        <h2 id="section-title" class="text-xl font-semibold mb-2">Manage Students</h2>
+        <form id="student-form" class="space-y-2">
+          <label for="student-name">Student Name:</label>
+          <input type="text" id="student-name" placeholder="Enter student name" required>
+          <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded">Add Student</button>
+        </form>
+        <ul id="student-list" class="mt-4"></ul>
+      </section>
+
+      <!-- Attendance Table -->
+      <section>
+        <h2 class="text-xl font-semibold mb-2">Mark Attendance</h2>
+        <table class="w-full border-collapse border">
+          <thead>
+            <tr>
+              <th class="border px-2">Roll #</th>
+              <th class="border px-2">Student Name</th>
+              <th class="border px-2">Present Count</th>
+              <th class="border px-2">Absent Count</th>
+              <th class="border px-2">Mark</th>
+            </tr>
+          </thead>
+          <tbody id="attendance-table"></tbody>
+        </table>
+      </section>
+
+      <!-- Attendance Ratio -->
+      <section>
+        <h2 class="text-xl font-semibold mb-2">Attendance Ratio</h2>
+        <button onclick="calculateAttendance()" class="bg-indigo-600 text-white px-4 py-2 rounded">Calculate Attendance</button>
+        <ul id="attendance-percentage" class="mt-4"></ul>
+      </section>
+
+      <!-- Attendance Bar -->
+      <section>
+        <h2 class="text-xl font-semibold mb-2">Absent/Present Bar</h2>
+        <ul id="attendance-bar-list" class="space-y-2"></ul>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Student Attendance Management System</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
