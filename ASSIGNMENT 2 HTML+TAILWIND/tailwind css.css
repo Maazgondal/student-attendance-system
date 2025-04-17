@@ -1,0 +1,39 @@
+/* styles.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fafb;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #1e40af;
+  color: white;
+}
+
+button {
+  @apply transition duration-200 ease-in-out hover:scale-105;
+}
+
+input, select {
+  @apply border border-gray-300 rounded px-2 py-1 w-full;
+}
+
+form label {
+  @apply font-semibold;
+}
+
+section {
+  @apply mb-6 p-4 bg-white rounded shadow;
+}
+
+ul {
+  @apply list-disc pl-6;
+}
+
+
